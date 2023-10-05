@@ -9,7 +9,12 @@ export default function RouterIcon({
   textVisible,
 }: {
   name: string;
-  Icon: any;
+  Icon: React.ForwardRefExoticComponent<
+    Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+      title?: string | undefined;
+      titleId?: string | undefined;
+    } & React.RefAttributes<SVGSVGElement>
+  >;
   href: string;
   textVisible: boolean;
 }) {
@@ -34,7 +39,7 @@ export default function RouterIcon({
             },
           }}
           className={classNames(
-            "text-2xl font-bold text-center mt-2.5 md:mt-5 lg:mt-10 transition-all"
+            "text-2xl font-bold text-center mt-2.5 md:mt-5 lg:mt-10 "
           )}
         >
           {name}

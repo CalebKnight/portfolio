@@ -16,7 +16,12 @@ export default function NavAnimated({
   windowHeight: number;
   icons: {
     name: string;
-    icon: any;
+    icon: React.ForwardRefExoticComponent<
+      Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+        title?: string | undefined;
+        titleId?: string | undefined;
+      } & React.RefAttributes<SVGSVGElement>
+    >;
     href: string;
   }[];
 }) {
@@ -31,7 +36,7 @@ export default function NavAnimated({
     routerAnimate(
       routerIconsScope.current,
       {
-        scale: 0.5,
+        scale: 0.33,
         y: windowHeight * 0.5 - routerIconsScope.current.offsetHeight / 2,
       },
       {
@@ -58,7 +63,7 @@ export default function NavAnimated({
         <motion.div
           ref={routerIconsScope}
           className={classNames(
-            "flex max-w-5xl w-full m-auto h-52 pointer-events-auto text-sky-500 p-5"
+            "flex max-w-5xl w-full m-auto h-52 pointer-events-auto text-white p-5"
           )}
           onClick={handleRouteClickedFirst}
         >
@@ -77,7 +82,7 @@ export default function NavAnimated({
               opacity: 0,
             }}
             ref={borderScope}
-            className="border-2 border-sky-500 absolute pointer-events-none inset-0 w-full h-full rounded-full"
+            className="border-2 border-sky-50 absolute pointer-events-none inset-0 w-full h-full rounded-full"
           ></motion.div>
         </motion.div>
       </AnimatePresence>
