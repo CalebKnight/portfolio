@@ -5,7 +5,7 @@ import {
   CloudIcon,
   ComputerDesktopIcon,
   UserCircleIcon,
-} from "@heroicons/react/20/solid";
+} from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -56,14 +56,15 @@ const xVariants = {
 
 function App() {
   const location = useLocation();
-  const navWidthRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const [navWidth, setNavWidth] = useState(0);
+  const [navPadding, setNavPadding] = useState(0);
 
   useEffect(() => {
     const updateWidth = () => {
-      if (navWidthRef.current) {
-        const rect = navWidthRef.current.getBoundingClientRect();
+      if (navRef.current) {
+        const rect = navRef.current.getBoundingClientRect();
         setNavWidth(rect.width);
       }
     };
@@ -74,8 +75,29 @@ function App() {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
+  useEffect(() => {
+    const updatePadding = () => {
+      if (navRef.current) {
+        const rect = navRef.current.getBoundingClientRect();
+        if (window.innerWidth < 640) setNavPadding(rect.height + 20);
+        else setNavPadding(rect.height + 40);
+      }
+    };
+    updatePadding();
+    window.addEventListener("resize", updatePadding);
+
+    return () => window.removeEventListener("resize", updatePadding);
+  }, []);
+
   return (
-    <div className="bg-black overflow-clip w-full min-h-screen">
+    <div
+      style={
+        {
+          paddingBottom: `${navPadding + 30}px`,
+        } as React.CSSProperties
+      }
+      className="bg-black overflow-clip w-full min-h-screen"
+    >
       <div>
         <Routes>
           <Route path="/" Component={Home}></Route>
@@ -86,10 +108,10 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 w-full z-50">
-        <div className="relative py-3 w-full max-w-md mx-auto backdrop-blur-md px-5 rounded-full my-4 z-30 bg-gray-200/20 border-2 overflow-clip">
+        <div className="relative py-1 lg:py-3 w-full max-w-xs lg:max-w-md mx-auto backdrop-blur-md px-10 lg:px-5 rounded-full my-4 z-30 bg-gray-200/20  border-2 overflow-clip">
           <div
-            ref={navWidthRef}
-            className="flex flex-row relative w-full pointer-events-auto py-2"
+            ref={navRef}
+            className="flex flex-row relative w-full pointer-events-auto py-2 "
           >
             {icons.map(({ name, icon, href }) => (
               <StaticRouterIcon key={name} Icon={icon} href={href} />
@@ -102,7 +124,7 @@ function App() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="absolute inset-0 w-1/3 flex"
             >
-              <div className="m-auto flex h-14 w-32 transition-transform bg-white rounded-full -z-10"></div>
+              <div className="m-auto flex w-8 h-8 lg:h-14 lg:w-14 transition-transform bg-white rounded-full -z-10"></div>
             </motion.div>
           </div>
         </div>

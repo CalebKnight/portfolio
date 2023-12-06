@@ -31,12 +31,12 @@ export default function Profile() {
           className=" w-full h-96 lg:h-200 object-cover object-center aspect-square shadow-xl relative"
         />
       </div>
-      <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-white">
+      <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-gray-300">
         <div>
           <h1 className="font-bold text-5xl text-white text-left mt-5">
             Caleb Knight
           </h1>
-          <h2 className="font-serif text-white text-md text-left mt-3">
+          <h2 className="font-serif text-white text-md text-left mt-3 pl-1">
             Full Stack Web Developer
           </h2>
           <div className="flex flex-row flex-wrap gap-2.5 my-2">
@@ -53,10 +53,10 @@ export default function Profile() {
               </div>
             ))}
           </div>
-          <div className="flex lg:flex-row flex-col gap-x-10">
+          <div className="flex lg:flex-row flex-col gap-x-10 px-2.5">
             <div className="mt-5 lg:max-w-1/2 w-full">
               <h2 className="font-bold text-md">Who am I?</h2>
-              <p className="text-sm mt-auto text-justify">
+              <p className="text-sm mt-auto">
                 I am deeply immersed in the world of full-stack development,
                 focusing primarily on Javascript, React, and TailwindCSS. My
                 journey includes designing a captivating site for Exclusive
@@ -69,7 +69,7 @@ export default function Profile() {
             </div>
             <div className="mt-5 lg:max-w-1/2 w-full">
               <h2 className="font-bold text-md">Why Partner with Me?</h2>
-              <p className="text-sm mt-auto text-justify">
+              <p className="text-sm mt-auto">
                 In my role as a committed freelance web developer, I am
                 dedicated to evolving and excelling in web development. My
                 collaborative approach ensures a smooth integration into diverse
