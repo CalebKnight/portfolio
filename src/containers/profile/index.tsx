@@ -26,7 +26,7 @@ export default function Profile() {
     <div className="flex flex-col lg:max-w-7xl m-auto w-full h-full">
       <div className="mr-auto sm:mt-10 relative w-full shadow-xl sm:rounded-3xl overflow-clip gap-x-5">
         <img
-          src="public/images/MountainPFP.jpg"
+          src="/images/MountainPFP.jpg"
           alt="profile"
           className="w-full h-120 lg:h-200 object-cover object-center shadow-xl relative"
         />
