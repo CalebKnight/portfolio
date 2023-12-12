@@ -18,17 +18,19 @@ export default function StaticRouterIcon({
   return (
     <div
       className={classNames(
-        `group relative flex h-full w-full flex-col text-white  transition-colors z-50`,
-        checkHref(href, location) && "text-white"
+        `flex h-full w-full flex-col text-white transition-colors z-50`
+        // checkHref(href, location) && "text-white"
       )}
     >
-      {!checkHref(href, location) && (
-        <div className="hidden group-hover:flex group-hover:scale-110 absolute inset-0 m-auto w-11 h-11 bg-neutral-100/10 drop-shadow-2xl -z-10 rounded-full"></div>
-      )}
-
-      <Link key={href} to={href} className="relative m-auto flex flex-col ">
-        <Icon className="absolute inset-0 m-auto w-6 h-6 lg:h-8 lg:w-8 object-cover opacity-75 blur-3xl transition-transform group-hover:scale-110 " />
-        <Icon className="m-auto flex w-6 h-6 lg:h-8 lg:w-8 group-hover:scale-110 transition-transform  " />
+      <Link
+        key={href}
+        to={href}
+        className="relative m-auto flex flex-col group w-6 h-6 lg:h-8 lg:w-8"
+      >
+        {!checkHref(href, location) && (
+          <div className="hidden group-hover:flex group-hover:scale-[140%] absolute inset-0 m-auto w-full h-full bg-neutral-100/10 drop-shadow-2xl -z-10 rounded-full"></div>
+        )}
+        <Icon className="m-auto flex w-full h-full group-hover:scale-110 transition-transform  " />
       </Link>
     </div>
   );

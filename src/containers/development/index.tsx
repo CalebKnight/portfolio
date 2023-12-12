@@ -1,17 +1,11 @@
 import { Link } from "react-router-dom";
+import { projects } from "../../data";
 
-const ER = {
-  name: "Exclusive Rides",
-  icon: "/images/project_logos/er.svg",
-};
-const CB = {
-  name: "Cloud BnB",
-  icon: "/images/project_logos/cb.svg",
-};
-const CFNA = {
-  name: "Complete Face Natural Aesthetics",
-  icon: "/images/project_logos/cfna.png",
-};
+const ER = projects.find((project) => project.id === "exclusive-rides");
+const CB = projects.find((project) => project.id === "cloud-bnb");
+const CFNA = projects.find(
+  (project) => project.id === "complete-face-natural-aesthetics"
+);
 
 const technologies = [
   {
@@ -100,18 +94,21 @@ export default function Development() {
               </p>
             </div>
             <div className="flex flex-row flex-wrap gap-x-3">
-              {technology.projects.map((project) => (
-                <Link
-                  to={`/projects/${project.name}`}
-                  className="w-6 h-6 lg:w-8 lg:h-8 text-white my-auto aspect-square"
-                >
-                  <img
-                    className="w-full h-full object-center object-scale-down"
-                    src={project.icon}
-                    alt={`${project.name} icon`}
-                  />
-                </Link>
-              ))}
+              {technology.projects.map(
+                (project) =>
+                  project && (
+                    <Link
+                      to={`/projects/${project.name}`}
+                      className="w-6 h-6 lg:w-8 lg:h-8 text-white my-auto aspect-square"
+                    >
+                      <img
+                        className="w-full h-full object-center object-scale-down"
+                        src={project.icon}
+                        alt={`${project.name} icon`}
+                      />
+                    </Link>
+                  )
+              )}
             </div>
           </div>
         ))}
