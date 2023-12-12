@@ -27,7 +27,16 @@ export default {
         "1/2" : "50%",
         "1/3" : "33.333333%",
         "1/4" : "25%",
-      })
+      }),
+      fontFamily: {
+        'space-mono' : ["Space Mono", "monospace"],
+        'bold-space-mono' : ["Space Mono Bold", "monospace"],
+        'medium-space-mono' : ["Space Mono Medium", "monospace"],
+        'semi-bold-space-mono' : ["Space Mono Semi Bold", "monospace"],
+        'extra-bold-space-mono' : ["Space Mono Extra Bold", "monospace"],
+        'italic-space-mono' : ["Space Mono Italic", "monospace"],
+        
+      },
     },
   },
   plugins: [],

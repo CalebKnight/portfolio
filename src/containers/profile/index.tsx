@@ -36,7 +36,7 @@ export default function Profile() {
           <h1 className="font-bold text-5xl text-white text-left mt-5">
             Caleb Knight
           </h1>
-          <h2 className="font-serif text-white text-md text-left mt-3 pl-1">
+          <h2 className="text-white text-md text-left mt-3 pl-1">
             Full Stack Web Developer
           </h2>
           <div className="flex flex-row flex-wrap gap-2.5 my-2">
@@ -47,7 +47,7 @@ export default function Profile() {
                   alt={skill.name}
                   className="w-4 lg:w-5 aspect-square h-4 lg:h-5"
                 />
-                <p className="font-serif text-white text-xs lg:text-sm text-left ml-1 lg:ml-2">
+                <p className="text-white text-xs lg:text-sm text-left ml-1 lg:ml-2">
                   {skill.name}
                 </p>
               </div>

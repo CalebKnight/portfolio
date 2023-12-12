@@ -77,7 +77,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-y-12 max-w-7xl w-full mx-auto">
+    <div className="flex flex-col gap-y-12 max-w-7xl w-full mx-auto pt-10">
       {projects.map((project) => (
         <Link
           to={`/projects/${project.id}`}

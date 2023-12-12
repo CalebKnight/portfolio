@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Development, Profile, Projects } from "./containers";
+import { Development, Profile, Projects, Work } from "./containers";
 import { StaticRouterIcon } from "./components";
 import {
   CloudIcon,
@@ -13,7 +13,7 @@ const icons = [
   {
     name: "Caleb Knight",
     icon: UserCircleIcon,
-    href: "/me",
+    href: "/",
   },
   {
     name: "My Skillset",
@@ -98,17 +98,17 @@ function App() {
       }
       className="bg-black overflow-clip w-full min-h-screen"
     >
-      <div>
+      <div className="font-space-mono">
         <Routes>
           <Route path="/" Component={Profile}></Route>
           <Route path="/development" Component={Development}></Route>
           <Route path="/projects" Component={Projects}></Route>
-          <Route path="/me" Component={Profile}></Route>
+          <Route path="/projects/*" Component={Work}></Route>
         </Routes>
       </div>
 
       <div className="fixed bottom-0 w-full z-50">
-        <div className="relative py-1.5 w-full max-w-sm mx-auto backdrop-blur-sm rounded-full my-4 z-30 drop-shadow ring-1 ring-white bg-gray-950 overflow-clip">
+        <div className="relative py-1.5 w-full max-w-sm mx-auto backdrop-blur-sm rounded-full my-4 z-30 drop-shadow ring-1 ring-neutral-700 bg-neutral-900 overflow-clip">
           <div
             ref={navRef}
             className="flex flex-row relative w-full pointer-events-auto py-2 "
@@ -124,7 +124,7 @@ function App() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="absolute inset-0 w-1/3 flex justify-center items-center pointer-events-none"
             >
-              <div className=" w-9 h-9 lg:h-11 lg:w-11 transition-transform drop-shadow-2xl  rounded-full -z-10 shadow-xl border-2 border-white bg-gray-800"></div>
+              <div className=" w-9 h-9 lg:h-11 lg:w-11 transition-transform drop-shadow-2xl  rounded-full -z-10 shadow-xl border-2 border-neutral-700 bg-neutral-900"></div>
             </motion.div>
           </div>
         </div>

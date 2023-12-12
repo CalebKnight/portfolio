@@ -77,12 +77,12 @@ const technologies = [
 export default function Development() {
   return (
     <div className="flex flex-col max-w-7xl w-full mx-auto h-full px-5 lg:px-0">
-      <h1 className="font-mono text-white text-2xl md:text-3xl lg:text-4xl text-center w-full my-5 lg:my-10">
+      <h1 className="font-space-mono text-white text-2xl md:text-3xl lg:text-4xl text-center w-full my-5 lg:my-10">
         My Technologies
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-auto ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 m-auto ">
         {technologies.map((technology) => (
-          <div className="flex flex-col gap-2.5 p-5 border-2 border-zinc-50/10 rounded-xl overflow-clip">
+          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip">
             <div className="w-full flex flex-row gap-x-5">
               <img
                 src={technology.icon}
