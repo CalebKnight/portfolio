@@ -108,7 +108,7 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 w-full z-50">
-        <div className="relative py-1 lg:py-3 w-full max-w-xs lg:max-w-md mx-auto backdrop-blur-md px-10 lg:px-5 rounded-full my-4 z-30 bg-gray-200/20  border-2 overflow-clip">
+        <div className="relative py-1 lg:py-3 w-full max-w-xs lg:max-w-md mx-auto backdrop-blur-md px-10 lg:px-5 rounded-full my-4 z-30 bg-gray-50  border-2 border-zinc-700 overflow-clip">
           <div
             ref={navRef}
             className="flex flex-row relative w-full pointer-events-auto py-2 "
@@ -122,9 +122,9 @@ function App() {
               variants={xVariants}
               animate={getPosition(location.pathname)}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="absolute inset-0 w-1/3 flex"
+              className="absolute inset-0 w-1/3 flex justify-center items-center pointer-events-none"
             >
-              <div className="m-auto flex w-8 h-8 lg:h-14 lg:w-14 transition-transform bg-white rounded-full -z-10"></div>
+              <div className=" w-8 h-8 lg:h-16 lg:w-16 transition-transform bg-white rounded-full -z-10 shadow-xl border-2 border-zinc-700"></div>
             </motion.div>
           </div>
         </div>

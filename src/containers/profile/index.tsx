@@ -26,9 +26,9 @@ export default function Profile() {
     <div className="flex flex-col lg:max-w-7xl m-auto w-full h-full">
       <div className="mr-auto sm:mt-10 relative w-full shadow-xl sm:rounded-3xl overflow-clip gap-x-5">
         <img
-          src="public/images/PFPWide.jpg"
+          src="public/images/MountainPFP.jpg"
           alt="profile"
-          className=" w-full h-96 lg:h-200 object-cover object-center aspect-square shadow-xl relative"
+          className="w-full h-120 lg:h-200 object-cover object-center shadow-xl relative"
         />
       </div>
       <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-gray-300">
@@ -43,7 +43,7 @@ export default function Profile() {
             {skills.map((skill) => (
               <div className="shadow rounded-full bg-gray-900 p-2.5 items-center justify-center flex flex-row">
                 <img
-                  src={`public/images/logos/${skill.icon}`}
+                  src={`images/logos/${skill.icon}`}
                   alt={skill.name}
                   className="w-4 lg:w-5 aspect-square h-4 lg:h-5"
                 />
