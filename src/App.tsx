@@ -1,11 +1,11 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Development, Home, Profile, Projects } from "./containers";
+import { Development, Profile, Projects } from "./containers";
 import { StaticRouterIcon } from "./components";
 import {
   CloudIcon,
   ComputerDesktopIcon,
   UserCircleIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -100,7 +100,7 @@ function App() {
     >
       <div>
         <Routes>
-          <Route path="/" Component={Home}></Route>
+          <Route path="/" Component={Profile}></Route>
           <Route path="/development" Component={Development}></Route>
           <Route path="/projects" Component={Projects}></Route>
           <Route path="/me" Component={Profile}></Route>
@@ -108,7 +108,7 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 w-full z-50">
-        <div className="relative py-1 lg:py-3 w-full max-w-xs lg:max-w-md mx-auto backdrop-blur-md px-10 lg:px-5 rounded-full my-4 z-30 bg-gray-50  border-2 border-zinc-700 overflow-clip">
+        <div className="relative py-1.5 w-full max-w-sm mx-auto backdrop-blur-sm rounded-full my-4 z-30 drop-shadow ring-1 ring-white bg-gray-950 overflow-clip">
           <div
             ref={navRef}
             className="flex flex-row relative w-full pointer-events-auto py-2 "
@@ -124,7 +124,7 @@ function App() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="absolute inset-0 w-1/3 flex justify-center items-center pointer-events-none"
             >
-              <div className=" w-8 h-8 lg:h-16 lg:w-16 transition-transform bg-white rounded-full -z-10 shadow-xl border-2 border-zinc-700"></div>
+              <div className=" w-9 h-9 lg:h-11 lg:w-11 transition-transform drop-shadow-2xl  rounded-full -z-10 shadow-xl border-2 border-white bg-gray-800"></div>
             </motion.div>
           </div>
         </div>
