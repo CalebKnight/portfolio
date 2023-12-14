@@ -27,7 +27,7 @@ const projects = [
     icon: "/images/project_logos/cb.svg",
     type: "Website",
     description: "A website for a vacation rental company.",
-    categories: ["React", "TailwindCSS", "Node.js", "PostgreSQL", "TypeScript"],
+    categories: ["React", "TailwindCSS", "Node.js", "TypeScript"],
     Images: [
       {
         src: "/images/projects/cb/cb1.png",

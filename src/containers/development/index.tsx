@@ -11,59 +11,55 @@ const technologies = [
   {
     name: "React",
     icon: "/images/logos/React-icon.svg",
-    description: "A JavaScript library for building user interfaces",
+    description: "Library for building dynamic web interfaces",
     projects: [ER, CB, CFNA],
   },
   {
     name: "TailwindCSS",
     icon: "/images/logos/tailwind.svg",
-    description: "A utility-first CSS framework",
+    description: "CSS framework for rapid UI development",
     projects: [ER, CB, CFNA],
   },
   {
     name: "Node.js",
     icon: "/images/logos/Node.js_logo.svg",
-    description: "Back-end JavaScript runtime environment",
+    description: "Server-side JavaScript environment",
     projects: [CB, CFNA],
   },
   {
     name: "PostgreSQL",
     icon: "/images/logos/Postgresql_elephant.svg",
-    description: "A free and open-source relational database management system",
+    description: "Advanced open-source relational database",
     projects: [CFNA],
   },
   {
     name: "TypeScript",
     icon: "/images/logos/Typescript_logo_2020.svg",
-    description: "A strict syntactical superset of JavaScript",
+    description: "JavaScript extension for large-scale applications",
     projects: [ER, CB, CFNA],
   },
   {
     name: "HTML",
     icon: "/images/logos/html.svg",
-    description:
-      "Standard markup language for documents designed to be displayed in a web browser",
+    description: "Foundation of web content structure",
     projects: [ER, CB],
   },
   {
     name: "CSS",
     icon: "/images/logos/css.svg",
-    description:
-      "Style sheet language used for describing the presentation of a document written in HTML",
+    description: "Design language for web aesthetics",
     projects: [ER, CB],
   },
   {
     name: "DevOps",
     icon: "/images/logos/frontend.svg",
-    description:
-      "A set of practices that combines software development and IT operations",
+    description: "Practices for software development and operations",
     projects: [CB, CFNA],
   },
   {
     name: "JavaScript",
     icon: "/images/logos/js.svg",
-    description:
-      "A programming language that conforms to the ECMAScript specification",
+    description: "Scripting language for interactive web pages",
     projects: [ER, CB, CFNA],
   },
 ];
@@ -76,7 +72,7 @@ export default function Development() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 m-auto ">
         {technologies.map((technology) => (
-          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip">
+          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip bg-neutral-900">
             <div className="w-full flex flex-row gap-x-5">
               <img
                 src={technology.icon}
@@ -89,7 +85,7 @@ export default function Development() {
               </h1>
             </div>
             <div className="flex flex-grow">
-              <p className="text-gray-200 text-xs md:text-sm font-medium">
+              <p className="text-neutral-100 text-xs md:text-sm font-medium">
                 {technology.description}
               </p>
             </div>
@@ -99,7 +95,7 @@ export default function Development() {
                   project && (
                     <Link
                       to={`/projects/${project.name}`}
-                      className="w-6 h-6 lg:w-8 lg:h-8 text-white my-auto aspect-square"
+                      className="w-6 h-6 lg:w-8 lg:h-8  my-auto aspect-square"
                     >
                       <img
                         className="w-full h-full object-center object-scale-down"
