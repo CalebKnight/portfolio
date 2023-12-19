@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { projects } from "../../data";
+import { TechnologiesCarousel } from "../../components";
 
 export default function Projects() {
   return (
@@ -49,12 +50,8 @@ export default function Projects() {
               </div>
             ))}
           </div>
-          <div className="relative mt-2.5 w-full overflow-clip">
-            {project.categories.map((category) => (
-              <div className="my-1 mr-2 inline-block rounded-full border border-neutral-700 bg-neutral-800/80 px-3 py-0.5 text-xs text-neutral-400 sm:text-sm">
-                {category}
-              </div>
-            ))}
+          <div className="relative mt-2.5 w-full overflow-clip flex flex-row gap-x-3 max-w-fit">
+            <TechnologiesCarousel work={project} />
           </div>
         </Link>
       ))}

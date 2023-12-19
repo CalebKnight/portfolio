@@ -28,12 +28,14 @@ const icons = [
 ];
 
 function getPosition(href: string) {
-  switch (href) {
-    case "/me":
+  switch (true) {
+    case href == "/me":
       return "left";
-    case "/development":
+    case href == "/development":
       return "center";
-    case "/projects":
+    case href == "/projects":
+      return "right";
+    case href.includes("/projects/"):
       return "right";
     default:
       return "left";
@@ -96,7 +98,7 @@ function App() {
           paddingBottom: `${navPadding + 30}px`,
         } as React.CSSProperties
       }
-      className="bg-black overflow-clip w-full min-h-screen"
+      className="bg-black overflow-clip w-full min-h-screen h-full"
     >
       <div className="font-space-mono">
         <Routes>

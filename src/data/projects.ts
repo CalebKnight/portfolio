@@ -5,7 +5,7 @@ const projects = [
     icon: "/images/project_logos/er.svg",
     type: "Website",
     description: "A website for a luxury car rental company.",
-    categories: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
+    technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
     Images: [
       {
         src: "/images/projects/er/er1.png",
@@ -27,7 +27,7 @@ const projects = [
     icon: "/images/project_logos/cb.svg",
     type: "Website",
     description: "A website for a vacation rental company.",
-    categories: ["React", "TailwindCSS", "Node.js", "TypeScript"],
+    technologies: ["React", "TailwindCSS", "Node.js", "TypeScript"],
     Images: [
       {
         src: "/images/projects/cb/cb1.png",
@@ -49,7 +49,13 @@ const projects = [
     icon: "/images/project_logos/cfna.png",
     type: "Website",
     description: "A website for a medical spa.",
-    categories: ["React", "TailwindCSS", "Node.js", "PostgreSQL", "TypeScript"],
+    technologies: [
+      "React",
+      "TailwindCSS",
+      "Node.js",
+      "PostgreSQL",
+      "TypeScript",
+    ],
     Images: [
       {
         src: "/images/projects/cfna/cfna1.png",
