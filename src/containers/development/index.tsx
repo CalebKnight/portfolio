@@ -94,7 +94,7 @@ export default function Development() {
                 (project) =>
                   project && (
                     <Link
-                      to={`/projects/${project.name}`}
+                      to={`/projects/${project.id}`}
                       className="w-6 h-6 lg:w-8 lg:h-8  my-auto aspect-square"
                     >
                       <img

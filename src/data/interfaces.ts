@@ -5,7 +5,8 @@ export type Project = {
   type: string;
   description: string;
   technologies: string[];
-  Images: Image[];
+  images: Image[];
+  link: string;
 };
 
 type Image = {

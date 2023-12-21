@@ -7,7 +7,7 @@ export default function WorkGallery({ work }: { work: Project | null }) {
       <h1 className="text-white text-xl lg:text-3xl lg:col-span-2">
         Screenshots
       </h1>
-      {work.Images.map((image, i) => (
+      {work.images.map((image, i) => (
         <div>
           <img
             key={i}

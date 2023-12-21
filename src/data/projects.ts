@@ -6,7 +6,7 @@ const projects = [
     type: "Website",
     description: "A website for a luxury car rental company.",
     technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
-    Images: [
+    images: [
       {
         src: "/images/projects/er/er1.png",
         alt: "Exclusive Rides website screenshot",
@@ -20,6 +20,7 @@ const projects = [
         alt: "Exclusive Rides website screenshot",
       },
     ],
+    link: "https://exclusiverides.com.au",
   },
   {
     id: "cloud-bnb",
@@ -28,7 +29,7 @@ const projects = [
     type: "Website",
     description: "A website for a vacation rental company.",
     technologies: ["React", "TailwindCSS", "Node.js", "TypeScript"],
-    Images: [
+    images: [
       {
         src: "/images/projects/cb/cb1.png",
         alt: "Cloud BnB website screenshot",
@@ -42,6 +43,7 @@ const projects = [
         alt: "Cloud BnB website screenshot",
       },
     ],
+    link: "https://cloudbnb.com.au",
   },
   {
     id: "complete-face-natural-aesthetics",
@@ -56,7 +58,7 @@ const projects = [
       "PostgreSQL",
       "TypeScript",
     ],
-    Images: [
+    images: [
       {
         src: "/images/projects/cfna/cfna1.png",
         alt: "Complete Face Natural Aesthetics website screenshot",
@@ -70,6 +72,7 @@ const projects = [
         alt: "Complete Face Natural Aesthetics website screenshot",
       },
     ],
+    link: "https://cfna.clinic",
   },
 ];
 

@@ -39,7 +39,7 @@ export default function Projects() {
                 {project.description}
               </p>
             </div>
-            {project.Images.map((image) => (
+            {project.images.map((image) => (
               <div className="group relative max-h-40 w-full max-w-xs">
                 <div className="absolute inset-0 h-full w-full rounded-lg bg-gradient-to-br from-neutral-50 to-neutral-100 opacity-5 transition-opacity group-hover:opacity-10"></div>
                 <img
