@@ -54,7 +54,7 @@ export default function Profile() {
             ))}
           </div>
           <div className="flex lg:flex-row flex-col gap-x-10 mt-5 font-normal">
-            <div className="mt-5 lg:max-w-1/2 w-full border-neutral-500/50 bg-neutral-900 border-2 py-3.5 rounded-2xl px-2.5">
+            <div className="mt-5 lg:max-w-1/2 w-full border-neutral-500/50 bg-neutral-900/50 backdrop-blur-sm border-2 py-3.5 rounded-2xl px-2.5">
               <h2 className="font-bold text-md text-cyan-200">Who am I?</h2>
               <p className="text-sm mt-auto ">
                 I am deeply immersed in the world of full-stack development,
@@ -67,7 +67,7 @@ export default function Profile() {
                 pursuit of advanced client-focused software development.
               </p>
             </div>
-            <div className="mt-5 lg:max-w-1/2 w-full border-neutral-500/50 bg-neutral-900 border-2 py-3.5 rounded-2xl px-2.5">
+            <div className="mt-5 lg:max-w-1/2 w-full border-neutral-500/50 bg-neutral-900/50 backdrop-blur-sm border-2 py-3.5 rounded-2xl px-2.5">
               <h2 className="font-bold text-md text-cyan-200">
                 Why Partner with Me?
               </h2>

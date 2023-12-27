@@ -98,8 +98,28 @@ function App() {
           paddingBottom: `${navPadding + 30}px`,
         } as React.CSSProperties
       }
-      className="bg-black overflow-clip w-full min-h-screen h-full"
+      className="bg-black overflow-clip w-full min-h-screen h-full relative z-0"
     >
+      <div className="absolute inset-0 opacity-20 -z-10 ">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="url(#pattern1)" />
+          <defs>
+            <pattern
+              id="pattern1"
+              patternUnits="userSpaceOnUse"
+              width="1000"
+              height="1000"
+            >
+              <image
+                xlinkHref="/images/codeWallpaper.svg"
+                width="1000"
+                height="1000"
+              />
+            </pattern>
+          </defs>
+        </svg>
+      </div>
+
       <div className="font-space-mono">
         <Routes>
           <Route path="/" Component={Profile}></Route>
@@ -110,7 +130,7 @@ function App() {
       </div>
 
       <div className="fixed bottom-0 w-full z-50">
-        <div className="relative py-1.5 w-full max-w-sm mx-auto backdrop-blur-sm rounded-full my-4 z-30 drop-shadow ring-1 ring-neutral-700 bg-neutral-900 overflow-clip">
+        <div className="relative py-1.5 w-full max-w-sm mx-auto backdrop-blur-sm rounded-full my-4 z-30 drop-shadow ring-1 ring-neutral-700 bg-neutral-900/50  overflow-clip">
           <div
             ref={navRef}
             className="flex flex-row relative w-full pointer-events-auto py-2 "
@@ -126,7 +146,7 @@ function App() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="absolute inset-0 w-1/3 flex justify-center items-center pointer-events-none"
             >
-              <div className=" w-9 h-9 lg:h-11 lg:w-11 transition-transform drop-shadow-2xl  rounded-full -z-10 shadow-xl border-2 border-neutral-700 bg-neutral-900"></div>
+              <div className=" w-9 h-9 lg:h-11 lg:w-11 transition-transform drop-shadow-2xl  rounded-full -z-10 shadow-xl border-2 border-neutral-700 bg-neutral-900/50 "></div>
             </motion.div>
           </div>
         </div>

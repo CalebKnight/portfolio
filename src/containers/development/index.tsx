@@ -72,7 +72,7 @@ export default function Development() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 m-auto ">
         {technologies.map((technology) => (
-          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip bg-neutral-900">
+          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip bg-neutral-900/50 backdrop-blur-sm">
             <div className="w-full flex flex-row gap-x-5">
               <img
                 src={technology.icon}
