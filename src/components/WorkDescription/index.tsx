@@ -5,7 +5,7 @@ export default function WorkDescription({ work }: { work: Project | null }) {
 
   return (
     <div className="flex flex-col lg:flex-row text-white gap-5">
-      <div className="lg:w-3/5 flex flex-col gap-5">
+      <div className="lg:w-3/5 flex flex-col gap-5 border-neutral-500/50 bg-neutral-900/50 backdrop-blur-sm border-2 p-2.5 rounded-2xl ">
         <div className="">
           <h1 className="text-cyan-200 font-bold mb-2 text-lg">The Project</h1>
           <p className="text-xs lg:text-sm font-normal">
