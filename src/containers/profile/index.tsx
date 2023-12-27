@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { TextScroll } from "../../components";
+
 const skills = [
   {
     name: "Designer",
@@ -21,6 +24,21 @@ const skills = [
   },
 ];
 
+const variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: (idx: number) => {
+    return {
+      opacity: 1,
+      transition: {
+        delay: idx * 0.2 + 2,
+        duration: 0.2,
+      },
+    };
+  },
+};
+
 export default function Profile() {
   return (
     <div className="flex flex-col lg:max-w-7xl m-auto w-full h-full">
@@ -33,15 +51,27 @@ export default function Profile() {
       </div>
       <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-white">
         <div>
-          <h1 className="font-bold text-5xl text-white text-left mt-5">
-            Caleb Knight
-          </h1>
-          <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
-            Full Stack Web Developer
-          </h2>
-          <div className="flex flex-row flex-wrap gap-2.5 my-2 lg:my-5 text-white">
-            {skills.map((skill) => (
-              <div className="shadow rounded-full bg-neutral-900 border-neutral-500/50 border-2 p-2.5 items-center justify-center flex flex-row">
+          <TextScroll duration={5}>
+            <h1 className="font-bold text-5xl text-white text-left mt-5 whitespace-nowrap">
+              Caleb Knight
+            </h1>
+          </TextScroll>
+          <TextScroll duration={5} delay={0.75}>
+            <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
+              Full Stack Web Developer
+            </h2>
+          </TextScroll>
+
+          <motion.div className="flex flex-row flex-wrap gap-2.5 my-2 lg:my-5 text-white">
+            {skills.map((skill, idx) => (
+              <motion.div
+                key={idx}
+                custom={idx}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                className="shadow rounded-full bg-neutral-900/50 backdrop-blur-sm border-neutral-500/50 border-2 p-2.5 items-center justify-center flex flex-row"
+              >
                 <img
                   src={`images/logos/${skill.icon}`}
                   alt={skill.name}
@@ -50,13 +80,13 @@ export default function Profile() {
                 <p className=" text-xs lg:text-sm text-left ml-1 lg:ml-2">
                   {skill.name}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-          <div className="flex lg:flex-row flex-col gap-x-10 mt-5 font-normal">
+          </motion.div>
+          <div className="flex lg:flex-row flex-col gap-x-10 mt-5 font-sans font-extralight text-neutral-200">
             <div className="mt-5 lg:max-w-1/2 w-full border-neutral-500/50 bg-neutral-900/50 backdrop-blur-sm border-2 py-3.5 rounded-2xl px-2.5">
               <h2 className="font-bold text-md text-cyan-200">Who am I?</h2>
-              <p className="text-sm mt-auto ">
+              <p className="text-md leading-5 mt-auto">
                 I am deeply immersed in the world of full-stack development,
                 focusing primarily on Javascript, React, and TailwindCSS. My
                 journey includes designing a captivating site for Exclusive
@@ -71,7 +101,7 @@ export default function Profile() {
               <h2 className="font-bold text-md text-cyan-200">
                 Why Partner with Me?
               </h2>
-              <p className="text-sm mt-auto">
+              <p className="text-md leading-5 mt-auto">
                 In my role as a committed freelance web developer, I am
                 dedicated to evolving and excelling in web development. My
                 collaborative approach ensures a smooth integration into diverse
