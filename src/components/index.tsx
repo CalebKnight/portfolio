@@ -5,3 +5,4 @@ export { default as WorkGallery } from "./WorkGallery";
 export { default as WorkDescription } from "./WorkDescription";
 export { default as TechnologiesCarousel } from "./TechnologiesCarousel";
 export { default as TextScroll } from "./TextScroll";
+export { default as HomeSkillsCarousel } from "./HomeSkillsCarousel";

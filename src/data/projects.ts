@@ -43,7 +43,7 @@ const projects = [
         alt: "Cloud BnB website screenshot",
       },
     ],
-    link: "https://cloudbnb.com.au",
+    link: "No longer available",
   },
   {
     id: "complete-face-natural-aesthetics",
