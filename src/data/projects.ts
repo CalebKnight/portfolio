@@ -22,29 +22,29 @@ const projects = [
     ],
     link: "https://exclusiverides.com.au",
   },
-  {
-    id: "cloud-bnb",
-    name: "Cloud BnB",
-    icon: "/images/project_logos/cb.svg",
-    type: "Website",
-    description: "A website for a vacation rental company.",
-    technologies: ["React", "TailwindCSS", "Node.js", "TypeScript"],
-    images: [
-      {
-        src: "/images/projects/cb/cb1.png",
-        alt: "Cloud BnB website screenshot",
-      },
-      {
-        src: "/images/projects/cb/cb2.png",
-        alt: "Cloud BnB website screenshot",
-      },
-      {
-        src: "/images/projects/cb/cb3.png",
-        alt: "Cloud BnB website screenshot",
-      },
-    ],
-    link: "No longer available",
-  },
+  // {
+  //   id: "cloud-bnb",
+  //   name: "Cloud BnB",
+  //   icon: "/images/project_logos/cb.svg",
+  //   type: "Website",
+  //   description: "A website for a vacation rental company.",
+  //   technologies: ["React", "TailwindCSS", "Node.js", "TypeScript"],
+  //   images: [
+  //     {
+  //       src: "/images/projects/cb/cb1.png",
+  //       alt: "Cloud BnB website screenshot",
+  //     },
+  //     {
+  //       src: "/images/projects/cb/cb2.png",
+  //       alt: "Cloud BnB website screenshot",
+  //     },
+  //     {
+  //       src: "/images/projects/cb/cb3.png",
+  //       alt: "Cloud BnB website screenshot",
+  //     },
+  //   ],
+  //   link: "No longer available",
+  // },
   {
     id: "complete-face-natural-aesthetics",
     name: "Complete Face Natural Aesthetics",

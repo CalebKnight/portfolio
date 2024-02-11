@@ -72,15 +72,15 @@ export default function Development() {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 m-auto ">
         {technologies.map((technology) => (
-          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip bg-neutral-900/50 backdrop-blur-sm">
+          <div className="flex flex-col gap-2.5 p-5 border-2 border-neutral-500/50 rounded-xl overflow-clip bg-neutral-900/50 backdrop-blur-sm min-h-40">
             <div className="w-full flex flex-row gap-x-5">
               <img
                 src={technology.icon}
                 alt={`${technology.icon} icon`}
-                className="w-12 h-12  my-auto aspect-square"
+                className="w-8 h-8 sm:w-12 sm:h-12  my-auto aspect-square"
               />
 
-              <h1 className="font-bold text-white my-auto text-lg">
+              <h1 className="font-bold text-white my-auto text-md sm:text-lg">
                 {technology.name}
               </h1>
             </div>

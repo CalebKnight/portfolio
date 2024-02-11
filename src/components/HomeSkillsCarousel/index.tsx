@@ -6,19 +6,19 @@ const skills = [
     icon: "design.svg",
   },
   {
-    name: "Web Developer",
+    name: "Website Development",
     icon: "code.svg",
   },
   {
-    name: "Back End Developer",
+    name: "Back End Systems",
     icon: "deploy.svg",
   },
   {
-    name: "Front End Developer",
+    name: "Front End Design",
     icon: "frontend.svg",
   },
   {
-    name: "Database Developer",
+    name: "Databases",
     icon: "database.svg",
   },
 ];
