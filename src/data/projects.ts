@@ -4,7 +4,7 @@ const projects = [
     name: "Exclusive Rides",
     icon: "/images/project_logos/er.svg",
     type: "Website",
-    description: "A website for a luxury car rental company.",
+    description: "A website for a luxury car chauffeur rental company.",
     technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
     images: [
       {
@@ -21,6 +21,10 @@ const projects = [
       },
     ],
     link: "https://exclusiverides.com.au",
+    content: {
+      what: "Sean Dunne approached me to build a website for a new startup venture he was working on. The website needed to exude sophistication and luxury to effectively promote his bespoke chauffeur service. Potential customers would be greeted by commanding professional photographs showcasing his impressive fleet of vehicles, coupled with a seamless and intuitive pathway to explore further details and secure their next Exclusive Ride.",
+      how: "To bring this vision to life, I employed specialised animations using Framer Motion, implemented ingenious colour gradient techniques, and adhered to simplistic yet refined design patterns. The project was crafted utilising a React front end enhanced by TailwindCSS and complementary React libraries tailored to meet the project's requirements.",
+    }
   },
   // {
   //   id: "cloud-bnb",
@@ -73,6 +77,10 @@ const projects = [
       },
     ],
     link: "https://cfna.clinic",
+    content: {
+      what: "Davide Tonizzo required a digital platform for CFNA, his specialized botox clinic, designed to enhance client interactions and streamline administrative tasks. The focus was on creating an intuitive online experience for clients to book appointments and make inquiries, alongside a secure admin dashboard for Davide to manage the clinic's operations efficiently.",
+      how: "By integrating React, Node.js, and SQL, I built a tailored full-stack solution prioritizing functionality and user-friendly design, using TailwindCSS for a straightforward yet polished interface. The platform features a patient portal for convenient service access and an admin section for Davide's secure operational oversight, implemented with robust security protocols for data integrity. This project successfully simplifies clinic workflows while improving patient engagement, reflecting CFNA's dedication to exceptional care and operational efficiency."
+    }
   },
 ];
 

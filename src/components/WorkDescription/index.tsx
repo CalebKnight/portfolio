@@ -11,12 +11,7 @@ export default function WorkDescription({ work }: { work: Project | null }) {
             The Project
           </h1>
           <p className="text-xs lg:text-sm font-sans font-extralight">
-            This Project was for a client who wanted a website for their
-            business. The website was built using React and TailwindCSS. The
-            website is hosted on Netlify and the domain was purchased through
-            Google Domains. The website is a single page application with a
-            contact form that sends an email to the client. The website is also
-            responsive and works on mobile devices.
+           {work.content.what}
           </p>
         </div>
         <div className="">
@@ -24,12 +19,7 @@ export default function WorkDescription({ work }: { work: Project | null }) {
             How'd I do it?
           </h1>
           <p className="text-xs lg:text-sm font-sans font-extralight">
-            I built this website using React and TailwindCSS. I used React to
-            create a single page application that is responsive and works on
-            mobile devices. I used TailwindCSS to style the website. I used
-            Netlify to host the website and Google Domains to purchase the
-            domain. I used Netlify's built in form handling to create a contact
-            form that sends an email to the client.
+          {work.content.how}
           </p>
         </div>
       </div>
