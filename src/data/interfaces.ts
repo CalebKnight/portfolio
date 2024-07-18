@@ -7,6 +7,10 @@ export type Project = {
   technologies: string[];
   images: Image[];
   link: string;
+  content: {
+    what: string;
+    how: string;
+  };
 };
 
 type Image = {
