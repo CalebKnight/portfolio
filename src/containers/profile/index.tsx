@@ -12,16 +12,17 @@ export default function Profile() {
       </div>
       <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-white">
         <div>
-          <TextScroll duration={5}>
-            <h1 className="font-bold text-4xl sm:text-5xl text-white text-left mt-5 whitespace-nowrap">
-              Caleb Knight
-            </h1>
-          </TextScroll>
-          <TextScroll duration={5} delay={0.75}>
-            <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
-              Full Stack Web Developer
-            </h2>
-          </TextScroll>
+          <div className="font-bold text-4xl sm:text-5xl text-white text-left mt-5 ">
+            <TextScroll text={"Caleb Knight"} staggerDuration={0.1} />
+          </div>
+
+          <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
+            <TextScroll
+              text="Full Stack Web Developer"
+              staggerDuration={0.1}
+              delay={0.1}
+            />
+          </h2>
 
           <HomeSkillsCarousel />
           <div className="flex lg:flex-row flex-col gap-x-10 mt-5 font-sans font-extralight text-neutral-200">

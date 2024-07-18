@@ -1,27 +1,42 @@
 import { motion } from "framer-motion";
 
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+};
+
 export default function TextScroll({
+  text,
   delay,
-  duration,
-  children,
+  staggerDuration,
 }: {
+  text: string;
   delay?: number;
-  duration: number;
-  children?: React.ReactNode;
+  staggerDuration?: number;
 }) {
   return (
     <motion.div
-      className="text-white"
-      animate={{
-        clipPath: ["inset(0 100% 0 0)", "inset(0 0 0 0)", "inset(0 0 0 0)"],
-      }}
+      layout
+      variants={variants}
+      initial="initial"
+      animate="animate"
       transition={{
-        duration: duration ? duration : 1,
+        staggerChildren: staggerDuration ? staggerDuration : 0.1,
         delay: delay ? delay : 0,
       }}
-      initial={true}
+      className="whitespace-pre-wrap"
     >
-      {children}
+      {text.split(" ").map((word, idx) => {
+        return (
+          <motion.span variants={variants} key={idx}>
+            {word + " "}
+          </motion.span>
+        );
+      })}
     </motion.div>
   );
 }

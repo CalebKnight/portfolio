@@ -4,5 +4,6 @@ export { default as WorkHero } from "./WorkHero";
 export { default as WorkGallery } from "./WorkGallery";
 export { default as WorkDescription } from "./WorkDescription";
 export { default as TechnologiesCarousel } from "./TechnologiesCarousel";
-export { default as TextScroll } from "./TextScroll";
+export { default as TextFade } from "./TextFade";
 export { default as HomeSkillsCarousel } from "./HomeSkillsCarousel";
+export { default as TextScroll } from "./TextScroll";
