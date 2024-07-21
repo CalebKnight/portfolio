@@ -25,7 +25,7 @@ type Star = {
 const originalWidth = 2309;
 const originalHeight = 1299;
 const totalStars = 10000;
-const StarInterval = 1000;
+const StarInterval = 2000;
 const desiredStars = 500;
 
 export default function Background() {
