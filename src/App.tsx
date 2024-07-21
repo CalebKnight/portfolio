@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Development, Profile, Projects, Work } from "./containers";
-import { StaticRouterIcon } from "./components";
+import { Background, StaticRouterIcon } from "./components";
 import {
   CloudIcon,
   ComputerDesktopIcon,
@@ -98,26 +98,10 @@ function App() {
           paddingBottom: `${navPadding + 30}px`,
         } as React.CSSProperties
       }
-      className="bg-black overflow-clip w-full min-h-screen h-full relative z-0"
+      className=" overflow-clip w-full min-h-screen h-full relative z-0"
     >
-      <div className="absolute inset-0 opacity-20 -z-10 ">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <rect width="100%" height="100%" fill="url(#pattern1)" />
-          <defs>
-            <pattern
-              id="pattern1"
-              patternUnits="userSpaceOnUse"
-              width="1000"
-              height="1000"
-            >
-              <image
-                xlinkHref="/images/codeWallpaper.svg"
-                width="1000"
-                height="1000"
-              />
-            </pattern>
-          </defs>
-        </svg>
+      <div className="fixed inset-0 w-full h-full -z-10 bg-black">
+        <Background />
       </div>
 
       <div className="font-space-mono">

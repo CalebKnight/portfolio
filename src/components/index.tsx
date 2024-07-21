@@ -7,3 +7,4 @@ export { default as TechnologiesCarousel } from "./TechnologiesCarousel";
 export { default as TextFade } from "./TextFade";
 export { default as HomeSkillsCarousel } from "./HomeSkillsCarousel";
 export { default as TextScroll } from "./TextScroll";
+export {default as Background} from "./Background";

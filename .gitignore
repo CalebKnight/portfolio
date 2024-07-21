@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+/src/data/model_parameters.json
+/src/data/stars_coordinates_only.json
+/src/data/starColors.json
+/src/data/starPos.json
+/src/data/starSizes.json
