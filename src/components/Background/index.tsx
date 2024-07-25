@@ -1,7 +1,19 @@
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useRef, useEffect, useState } from 'react';
 
-// We will take in  the file index and the desired amount of stars that need to be added to grab the data from the server
+const originalWidth = 2309;
+const originalHeight = 1299;
+const totalStars = 7500;
+const StarInterval = 200;
+const desiredStars = 100;
+
+type StarType = {
+  x: number;
+  y: number;
+  color: [number, number, number];
+  size: number;
+  opacity: number;
+};
+
 function GeneratePromises(desiredStars: number, fileIndex: number) {
   const colorPromises = [];
   const posPromises = [];
@@ -26,54 +38,10 @@ function GeneratePromises(desiredStars: number, fileIndex: number) {
   return [colorPromises, posPromises, sizePromises];
 }
 
-type StarType = {
-  x: number;
-  y: number;
-  color: [number, number, number];
-  size: number;
-};
-
-function Star({
-  star,
-  idx,
-  multiplier,
-}: {
-  star: StarType;
-  idx: number;
-  multiplier: { x: number; y: number };
-}) {
-  return (
-    <>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        key={idx}
-        style={{
-          position: "absolute",
-          top: star.y * multiplier.y,
-          left: star.x * multiplier.x,
-          width: star.size,
-          height: star.size,
-          backgroundColor: `rgb(${star.color[0]}, ${star.color[1]}, ${star.color[2]})`,
-          borderRadius: "50%",
-        }}
-      >
-        <div className="relative w-full h-full rounded-full bg-inherit" />
-      </motion.div>
-    </>
-  );
-}
-
-const originalWidth = 2309;
-const originalHeight = 1299;
-const totalStars = 7500;
-const StarInterval = 2000;
-const desiredStars = 300;
-
 export default function Background() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [multiplier, setMultiplier] = useState({ x: 1.0, y: 1.0 });
-  const [stars, setStars] = useState([] as StarType[]);
+  const [stars, setStars] = useState<StarType[]>([]);
   const [fileIndex, setFileIndex] = useState(0);
 
   useEffect(() => {
@@ -85,8 +53,8 @@ export default function Background() {
     };
 
     resize();
-    window.addEventListener("resize", resize);
-    return () => window.removeEventListener("resize", resize);
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
   }, []);
 
   const fetchData = async (index: number) => {
@@ -121,13 +89,14 @@ export default function Background() {
             y: resolvedPosData[i][idx].p[1],
             color: color.c,
             size: resolvedSizeData[i][idx].s,
+            opacity: 0,  // Initial opacity
           })
         );
       });
 
       setStars((prevStars) => [...prevStars, ...newStars]);
     } catch (error) {
-      console.error("Error loading star data:", error);
+      console.error('Error loading star data:', error);
     }
   };
 
@@ -144,11 +113,36 @@ export default function Background() {
     return () => clearInterval(interval);
   }, [fileIndex]);
 
-  return (
-    <motion.div className="w-full h-full flex relative blur-[1px]">
-      {stars.map((star, idx) => (
-        <Star key={idx} star={star} idx={idx} multiplier={multiplier} />
-      ))}
-    </motion.div>
-  );
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext('2d');
+    let animationFrameId: number;
+
+    const render = () => {
+      if (canvas && context) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        stars.forEach((star) => {
+          star.opacity = Math.min(star.opacity + 0.01, 1);  // Increase opacity
+          context.beginPath();
+          context.arc(
+            star.x * multiplier.x,
+            star.y * multiplier.y,
+            star.size,
+            0,
+            Math.PI * 2
+          );
+          context.fillStyle = `rgba(${star.color[0]}, ${star.color[1]}, ${star.color[2]}, ${star.opacity})`;
+          context.fill();
+          context.closePath();
+        });
+      }
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    render();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [stars, multiplier]);
+
+  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} className='blur-sm'/>;
 }

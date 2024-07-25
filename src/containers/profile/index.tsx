@@ -3,12 +3,12 @@ import { HomeSkillsCarousel, TextScroll } from "../../components";
 export default function Profile() {
   return (
     <div className="flex flex-col lg:max-w-7xl m-auto w-full h-full">
-      <div className="mr-auto sm:mt-10 relative w-full shadow-xl sm:rounded-3xl overflow-clip gap-x-5">
+      <div className="mr-auto sm:mt-10 relative w-full shadow-inner sm:rounded-3xl border-2 border-neutral-500/50 h-96 lg:h-150 overflow-clip ">
         <img
           src="/images/MountainPFP.jpg"
           alt="profile"
-          className="w-full h-96 lg:h-150 object-cover object-center shadow-xl relative"
-        />
+          className="w-full h-full object-cover object-center"
+        />     
       </div>
       <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-white">
         <div>
