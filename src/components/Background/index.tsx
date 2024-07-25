@@ -3,7 +3,7 @@ import { useRef, useEffect, useState } from 'react';
 const originalWidth = 2309;
 const originalHeight = 1299;
 const totalStars = 7500;
-const StarInterval = 200;
+const StarInterval = 50;
 const desiredStars = 100;
 
 type StarType = {
@@ -127,7 +127,7 @@ export default function Background() {
           context.arc(
             star.x * multiplier.x,
             star.y * multiplier.y,
-            star.size,
+            star.size / 2,
             0,
             Math.PI * 2
           );
