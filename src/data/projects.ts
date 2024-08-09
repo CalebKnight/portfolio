@@ -54,7 +54,7 @@ const projects = [
     name: "Complete Face Natural Aesthetics",
     icon: "/images/project_logos/cfna.png",
     type: "Website",
-    description: "A website for a medical spa.",
+    description: "A website for a botox clinic.",
     technologies: [
       "React",
       "TailwindCSS",
