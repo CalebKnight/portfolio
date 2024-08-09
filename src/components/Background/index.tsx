@@ -144,5 +144,5 @@ export default function Background() {
     return () => cancelAnimationFrame(animationFrameId);
   }, [stars, multiplier]);
 
-  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} className='blur-sm'/>;
+  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} className='blur-[2px]'/>;
 }
