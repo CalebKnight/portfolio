@@ -9,15 +9,15 @@ const projects = [
     technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
     images: [
       {
-        src: "/images/projects/doug/doug1.png",
+        src: "/images/projects/doug/doug1.webp",
         alt: "Dr. Doug Kingwell website screenshot",
       },
       {
-        src: "/images/projects/doug/doug2.png",
+        src: "/images/projects/doug/doug2.webp",
         alt: "Dr. Doug Kingwell website screenshot",
       },
       {
-        src: "/images/projects/doug/doug3.png",
+        src: "/images/projects/doug/doug3.webp",
         alt: "Dr. Doug Kingwell website screenshot",
       },
     ],
@@ -44,15 +44,15 @@ const projects = [
     ],
     images: [
       {
-        src: "/images/projects/cfna/cfna1.png",
+        src: "/images/projects/cfna/cfna1.webp",
         alt: "Complete Face Natural Aesthetics website screenshot",
       },
       {
-        src: "/images/projects/cfna/cfna2.png",
+        src: "/images/projects/cfna/cfna2.webp",
         alt: "Complete Face Natural Aesthetics website screenshot",
       },
       {
-        src: "/images/projects/cfna/cfna3.png",
+        src: "/images/projects/cfna/cfna3.webp",
         alt: "Complete Face Natural Aesthetics website screenshot",
       },
     ],
@@ -71,15 +71,15 @@ const projects = [
     technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
     images: [
       {
-        src: "/images/projects/er/er1.png",
+        src: "/images/projects/er/er1.webp",
         alt: "Exclusive Rides website screenshot",
       },
       {
-        src: "/images/projects/er/er2.png",
+        src: "/images/projects/er/er2.webp",
         alt: "Exclusive Rides website screenshot",
       },
       {
-        src: "/images/projects/er/er3.png",
+        src: "/images/projects/er/er3.webp",
         alt: "Exclusive Rides website screenshot",
       },
     ],
@@ -98,15 +98,15 @@ const projects = [
     technologies: ["React", "TailwindCSS", "Node.js", "TypeScript"],
     images: [
       {
-        src: "/images/projects/cb/cb1.png",
+        src: "/images/projects/cb/cb1.webp",
         alt: "Cloud BnB website screenshot",
       },
       {
-        src: "/images/projects/cb/cb2.png",
+        src: "/images/projects/cb/cb2.webp",
         alt: "Cloud BnB website screenshot",
       },
       {
-        src: "/images/projects/cb/cb3.png",
+        src: "/images/projects/cb/cb3.webp",
         alt: "Cloud BnB website screenshot",
       },
     ],
