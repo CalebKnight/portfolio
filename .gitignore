@@ -28,3 +28,4 @@ dist-ssr
 /src/data/starColors.json
 /src/data/starPos.json
 /src/data/starSizes.json
+/.vscode

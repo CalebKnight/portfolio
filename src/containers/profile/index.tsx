@@ -8,21 +8,23 @@ export default function Profile() {
           src="/images/MountainPFP.jpg"
           alt="profile"
           className="w-full h-full object-cover object-center"
-        />     
+        />
       </div>
       <div className="w-full flex flex-col p-3.5 lg:p-5 z-10 text-white">
         <div>
-          <div className="font-bold text-4xl sm:text-5xl text-white text-left mt-5 ">
-            <TextScroll text={"Caleb Knight"} staggerDuration={0.1} />
-          </div>
+          <div className="bg-neutral-900/70 border-2 border-neutral-500/50 backdrop-blur-sm rounded-2xl p-3.5 lg:p-5">
+            <div className="font-bold text-4xl sm:text-5xl text-white text-left mt-5 ">
+              <TextScroll text={"Caleb Knight"} staggerDuration={0.1} />
+            </div>
 
-          <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
-            <TextScroll
-              text="Full Stack Web Developer"
-              staggerDuration={0.1}
-              delay={0.1}
-            />
-          </h2>
+            <h2 className="text-cyan-200 text-md text-left mt-3 pl-1">
+              <TextScroll
+                text="Full Stack Web Developer"
+                staggerDuration={0.1}
+                delay={0.1}
+              />
+            </h2>
+          </div>
 
           <HomeSkillsCarousel />
           <div className="flex lg:flex-row flex-col gap-x-10 mt-5 font-sans font-extralight text-neutral-200">

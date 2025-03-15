@@ -11,7 +11,7 @@ export default function WorkGallery({ work }: { work: Project | null }) {
         <div>
           <img
             key={i}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg lg:aspect-video"
             src={image.src}
             alt="screenshot"
           />

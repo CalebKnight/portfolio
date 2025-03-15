@@ -11,7 +11,7 @@ export default function WorkDescription({ work }: { work: Project | null }) {
             The Project
           </h1>
           <p className="text-xs lg:text-sm font-sans font-extralight">
-           {work.content.what}
+            {work.content.what}
           </p>
         </div>
         <div className="">
@@ -19,7 +19,7 @@ export default function WorkDescription({ work }: { work: Project | null }) {
             How'd I do it?
           </h1>
           <p className="text-xs lg:text-sm font-sans font-extralight">
-          {work.content.how}
+            {work.content.how}
           </p>
         </div>
       </div>
@@ -27,12 +27,12 @@ export default function WorkDescription({ work }: { work: Project | null }) {
         <img
           src={work.icon}
           alt={work.name + " icon"}
-          className="w-full h-full z-10"
+          className="w-full h-full max-h-72  mx-auto object-center z-10"
         />
         <img
           src={work.icon}
           alt={work.name + " icon"}
-          className="w-full h-full scale-150 absolute inset-0 blur-3xl z-0"
+          className="w-full h-full max-h-72 scale-150 aspect-auto absolute inset-0 blur-3xl z-0"
         />
       </div>
     </div>
