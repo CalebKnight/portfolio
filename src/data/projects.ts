@@ -4,8 +4,7 @@ const projects = [
     name: "Dr. Doug Kingwell",
     icon: "/images/project_logos/doug.svg",
     type: "Website",
-    description:
-      "A website for surgeon Dr Doug Kingwell",
+    description: "A website for surgeon Dr Doug Kingwell",
     technologies: ["React", "TailwindCSS", "HTML", "CSS", "TypeScript"],
     images: [
       {
@@ -40,7 +39,7 @@ const projects = [
       "PostgreSQL",
       "TypeScript",
       "HTML",
-      "CSS"
+      "CSS",
     ],
     images: [
       {
@@ -83,7 +82,7 @@ const projects = [
         alt: "Exclusive Rides website screenshot",
       },
     ],
-    link: "https://exclusiverides.com.au",
+    link: "https://orca-app-uvdf7.ondigitalocean.app",
     content: {
       what: "Sean Dunne approached me to build a website for a new startup venture he was working on. The website needed to exude sophistication and luxury to effectively promote his bespoke chauffeur service. Potential customers would be greeted by commanding professional photographs showcasing his impressive fleet of vehicles, coupled with a seamless and intuitive pathway to explore further details and secure their next Exclusive Ride.",
       how: "To bring this vision to life, I employed specialised animations using Framer Motion, implemented ingenious colour gradient techniques, and adhered to simplistic yet refined design patterns. The project was crafted utilising a React front end enhanced by TailwindCSS and complementary React libraries tailored to meet the project's requirements.",
